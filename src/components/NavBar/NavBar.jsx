@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./navBar.module.css";
-import { FaShoppingCart } from 'react-icons/fa';
+import { FaShoppingCart } from "react-icons/fa";
 
 const NavBar = () => {
 	return (
@@ -9,27 +9,24 @@ const NavBar = () => {
 				<img
 					className={styles.logo}
 					href=""
-					src="src/assets/img/DLogo.png"
+					src="/img/DLogo.png"
 					alt="logo Distribuidora Tittarelli"
 				/>
 			</Link>
 			<Link to="/inicio">
-			<h3 className={styles.titulo}>Distribuidora Tiitarelli</h3>
+				<h3 className={styles.titulo}>Distribuidora Tiitarelli</h3>
 			</Link>
 			<div className={styles.anContainer}>
 				<Link to="/productos">
 					<p className={styles.anchors} href="">
-						Productos
+						Todos los productos
 					</p>
 				</Link>
-				<a className={styles.anchors} href="">
-					Contacto
-				</a>
-				<a className={styles.anchors} href="">
-					Acerca de
-				</a>
+				<Link to="/joyeria">
+					<p className={styles.anchors}>Joyería</p>
+				</Link>
 			</div>
-			<Link to="/carrito" >
+			<Link to="/carrito">
 				<FaShoppingCart className={styles.svg} />
 			</Link>
 		</nav>
