@@ -5,7 +5,7 @@ import { FaShoppingCart } from "react-icons/fa";
 const NavBar = () => {
 	return (
 		<nav className={styles.container}>
-			<Link to="/inicio">
+			<Link to="/">
 				<img
 					className={styles.logo}
 					href=""
@@ -13,17 +13,20 @@ const NavBar = () => {
 					alt="logo Distribuidora Tittarelli"
 				/>
 			</Link>
-			<Link to="/inicio">
+			<Link to="/">
 				<h3 className={styles.titulo}>Distribuidora Tiitarelli</h3>
 			</Link>
 			<div className={styles.anContainer}>
-				<Link to="/productos">
+				<Link to="/category/item">
 					<p className={styles.anchors} href="">
 						Todos los productos
 					</p>
 				</Link>
-				<Link to="/joyeria">
+				<Link to="/category/jewelery">
 					<p className={styles.anchors}>Joyería</p>
+				</Link>
+				<Link to="/category/electronics">
+					<p className={styles.anchors}>Electrónica</p>
 				</Link>
 			</div>
 			<Link to="/carrito">
