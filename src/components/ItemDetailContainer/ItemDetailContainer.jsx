@@ -1,8 +1,8 @@
+import styles from "./itemDetailContainer.module.css";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import styles from "./productItem.module.css";
 
-const ProductItem = () => {
+const ItemDetailContainer = () => {
 	const [product, setProduct] = useState({});
 	const { id } = useParams();
 
@@ -26,4 +26,4 @@ const ProductItem = () => {
 	);
 };
 
-export default ProductItem;
+export default ItemDetailContainer;
