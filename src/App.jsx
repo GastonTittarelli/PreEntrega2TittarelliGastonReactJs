@@ -1,7 +1,7 @@
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 
 function App() {
@@ -9,6 +9,7 @@ function App() {
 		<div>
 			<NavBar />
 			<Routes>
+				<Route path="/" element={<Navigate to="category/item" />} />
 				<Route path="category/:category" element={<ItemListContainer />} />
 				<Route
 					path="/carrito"
